@@ -18,9 +18,6 @@ public class MainApp extends Application {
         // criar repo fake e viewmodel
         TaskRepository repository = new TaskRepositoryFake();
         TaskListViewModel vm = new TaskListViewModel(repository);
-        // popular com exemplos (opcional)
-        repository.save(new br.cesul.taskregistry.model.Task("Comprar leite", "2 litros"));
-        repository.save(new br.cesul.taskregistry.model.Task("Estudar", "MVVM e Test Doubles"));
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/cesul/taskregistry/TaskView.fxml"));
         Scene scene = new Scene(loader.load());

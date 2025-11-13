@@ -39,6 +39,7 @@ class TaskListViewModelTest {
         Task t = vm.addTask("Test", "desc");
         assertFalse(t.isCompleted());
         vm.toggleCompleted(t);
+
         assertTrue(vm.getItems().get(0).isCompleted());
     }
 }
