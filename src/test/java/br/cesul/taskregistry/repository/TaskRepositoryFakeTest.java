@@ -30,19 +30,6 @@ class TaskRepositoryFakeTest {
     }
 
     @Test
-    void toggleCompleted_shouldInvertFlag() {
-        Task t = new Task("Test", "desc");
-        repo.save(t);
-        assertFalse(repo.findAll().get(0).isCompleted());
-
-        repo.toggleCompleted(t.getId());
-        assertTrue(repo.findAll().get(0).isCompleted());
-
-        repo.toggleCompleted(t.getId());
-        assertFalse(repo.findAll().get(0).isCompleted());
-    }
-
-    @Test
     void deleteAll_shouldClearStorage() {
         repo.save(new Task("A","a"));
         repo.deleteAll();

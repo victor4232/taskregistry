@@ -17,8 +17,7 @@ class ValidatorsTest {
     @Test
     void validTitle_and_validDescription() {
         assertTrue(Validators.validTitle("Título válido"));
-        assertFalse(Validators.validTitle("")); // vazio
-        // descrição longa até limite passa
+        assertFalse(Validators.validTitle(""));
         String longDesc = "a".repeat(1000);
         assertTrue(Validators.validDescription(longDesc));
     }

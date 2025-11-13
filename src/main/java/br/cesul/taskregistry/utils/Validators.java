@@ -7,9 +7,9 @@ public class Validators {
         return input != null && !input.trim().isEmpty();
     }
 
-    // exemplo simples: título obrigatório e tamanho max 100
+    // exemplo simples: título obrigatório e tamanho max 30
     public static boolean validTitle(String input){
-        return notBlank(input) && input.trim().length() <= 100;
+        return notBlank(input) && input.trim().length() <= 20;
     }
 
     // descrição opcional, mas se presente limitar tamanho

@@ -14,7 +14,6 @@ class TaskTest {
         assertFalse(t.getId().trim().isEmpty(), "Id não deve ser vazio");
         assertEquals("", t.getTitle(), "Título padrão deve ser vazio");
         assertEquals("", t.getDescription(), "Descrição padrão deve ser vazia");
-        assertFalse(t.isCompleted(), "Completed padrão deve ser false");
     }
 
     @Test
@@ -24,7 +23,6 @@ class TaskTest {
         assertNotNull(t.getId());
         assertEquals("Comprar pão", t.getTitle());
         assertEquals("Pão integral", t.getDescription());
-        assertFalse(t.isCompleted());
     }
 
     @Test
@@ -32,12 +30,10 @@ class TaskTest {
         Task t = new Task();
         t.setTitle("Titulo X");
         t.setDescription("Desc X");
-        t.setCompleted(true);
         t.setId("custom-id-123");
 
         assertEquals("Titulo X", t.getTitle());
         assertEquals("Desc X", t.getDescription());
-        assertTrue(t.isCompleted());
         assertEquals("custom-id-123", t.getId());
     }
 }

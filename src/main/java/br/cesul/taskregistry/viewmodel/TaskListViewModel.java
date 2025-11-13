@@ -56,11 +56,8 @@ public class TaskListViewModel {
         return t;
     }
 
-    public void toggleCompleted(Task task) {
-        if (task == null) return;
-        repository.toggleCompleted(task.getId());
-        task.setCompleted(true);
-    }
+
+
 
 
 

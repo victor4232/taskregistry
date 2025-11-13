@@ -7,7 +7,6 @@ import java.util.List;
 public interface TaskRepository {
     List<Task> findAll();
     Task save(Task t);
-    void toggleCompleted(String id);
     void deleteAll();
 
 }

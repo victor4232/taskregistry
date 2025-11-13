@@ -62,18 +62,6 @@ public class TaskListView {
             }
         });
 
-        // duplo clique na linha para alternar completed
-        tableView.setRowFactory(tv -> {
-            TableRow<Task> row = new TableRow<>();
-            row.setOnMouseClicked(ev -> {
-                if (ev.getClickCount() == 2 && !row.isEmpty()) {
-                    Task t = row.getItem();
-                    viewModel.toggleCompleted(t);
-                    // visual simples: tachar título se concluído (via tooltip ou similar)
-                }
-            });
-            return row;
-        });
 
         // desabilitar botão se título em branco
         btnAdd.disableProperty().bind(Bindings.createBooleanBinding(

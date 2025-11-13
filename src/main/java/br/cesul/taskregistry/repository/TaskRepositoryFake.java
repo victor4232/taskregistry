@@ -38,16 +38,6 @@ public class TaskRepositoryFake implements TaskRepository {
     }
 
     @Override
-    public void toggleCompleted(String id) {
-        for (Task t : storage) {
-            if (t.getId().equals(id)) {
-                t.setCompleted(!t.isCompleted());
-                return;
-            }
-        }
-    }
-
-    @Override
     public void deleteAll() {
         storage.clear();
     }
